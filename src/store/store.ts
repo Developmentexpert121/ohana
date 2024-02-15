@@ -20,6 +20,7 @@ const store = configureStore({
 export default store;
 export type AppDispatch = typeof store.dispatch;
 export type RootState = ReturnType<typeof store.getState>;
-export const useAppDispatch: () => AppDispatch = useDispatch 
+// export const useAppDispatch: () => AppDispatch = useDispatch 
+export const useAppDispatch = () => useDispatch<AppDispatch>();
 export const useAppSelector = useSelector;
 
